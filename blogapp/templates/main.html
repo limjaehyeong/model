@@ -1,0 +1,6 @@
+{% for blogs in blogcontent.all %}
+    <h1> {{blogs.title}} </h1> 
+    <p> {{blogs.pub_date}} </p>
+    <p> {{blogs.summary}} <a href="{% url 'detail' blogs.id %}">..더보기</a></p>
+    <br><br>
+{% endfor %}
